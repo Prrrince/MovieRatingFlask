@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="form-background">
+    <div class="form">
+      <div class="header">
+        <div class="icon">
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <h3 class="form-heading">Log In</h3>
+      {% if error %}
+      <div class="py-1">
+        <div class="alert color-danger bg-white">
+          <span>{{error}}</span>
+        </div>
+      </div>
+      {% endif %}
+      <form method="post" autocomplete="off">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          <div class="input-text-group">
+            {{form.email(class="form-control")}}
+            <span>Email</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-text-group">
+            {{form.password(class="form-control")}}
+            <span>Password</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox">
+            {{form.remember(class="custom-control-input")}}
+            {{form.remember.label(class="custom-control-label")}}
+        </div>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="form-submit">Log In</button>
+        </div>
+        <div class="pt-3">
+          <small class="text-white">
+            Don't Have An Account?
+            <a href="{{url_for('register')}}" class="ml-2 text-white font-weight-bold">Sign Up</a>
+          </small>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

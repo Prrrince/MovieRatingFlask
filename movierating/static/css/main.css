@@ -1,0 +1,286 @@
+.color-danger {
+  color: #F44336;
+}
+
+.color-success {
+  color: #5bd252f2;
+}
+
+.color-primary {
+  color: #2196F3;
+}
+
+.alert {
+  font-size: 0.8rem;
+}
+
+.my-button, .form-background .form .form-submit, .primary-btn, .success-btn, .danger-btn {
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 3rem;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+.my-button:hover, .form-background .form .form-submit:hover, .primary-btn:hover, .success-btn:hover, .danger-btn:hover {
+  transform: translateY(-0.3rem);
+  filter: contrast(150%);
+}
+
+.danger-btn {
+  background-color: #F44336;
+}
+
+.success-btn {
+  background-color: #5bd252f2;
+}
+
+.primary-btn {
+  background-color: #2196F3;
+}
+
+.flash, .flash-warning, .flash-info, .flash-danger, .flash-success {
+  padding: 0.8rem;
+  padding-right: 2rem;
+  color: white;
+  text-shadow: 0 0 10px white;
+  font-weight: 700;
+  border-radius: 0.5rem 0 0 0.5rem;
+  display: inline-block;
+  position: fixed;
+  right: -500px;
+  top: 4rem;
+  z-index: 2;
+  font-size: 0.8rem;
+  animation: slideInLeft 10s ease-in 1;
+}
+
+@keyframes slideInLeft {
+  0% {
+    right: -500px;
+  }
+  8% {
+    right: 0;
+  }
+  92% {
+    right: 0;
+  }
+  100% {
+    right: -500px;
+  }
+}
+.flash-success {
+  background-color: #5bd252f2;
+}
+
+.flash-danger {
+  background-color: #F44336;
+}
+
+.flash-info {
+  background-color: #00BCD4;
+}
+
+.flash-warning {
+  background-color: #FF9800;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.bree-font {
+  font-family: "Bree Serif", serif;
+}
+
+.top-nav {
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-weight: 600;
+}
+
+.search-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
+  transition: 0.5s;
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.search-container .button-group-append {
+  position: relative;
+}
+.search-container .button-group-append input {
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  padding-right: 3.5rem;
+  border: 1px solid white;
+}
+.search-container .button-group-append input::placeholder {
+  color: #333;
+  font-weight: 400;
+}
+.search-container .button-group-append button {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.375rem;
+}
+.search-container .button-group-append button.search {
+  right: 1.8rem;
+}
+.search-container .button-group-append button.times {
+  right: 0.375rem;
+  transform: scale(1.2);
+}
+.search-container.hidden {
+  width: 0;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.invalid-feedback span {
+  margin-left: 1rem;
+}
+
+.form-background {
+  background-image: url("../images/form-back.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.form-background:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.form-background .form {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+  font-weight: 600;
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.form-background .form .header {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+}
+.form-background .form .header .icon {
+  padding-top: 0.5rem;
+  color: #333;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+}
+.form-background .form .form-heading {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+}
+.form-background .form .form-group {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.form-background .form .input-text-group {
+  position: relative;
+}
+.form-background .form input[type=text], .form-background .form input[type=email], .form-background .form input[type=password] {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid;
+}
+.form-background .form input[type=text]:focus, .form-background .form input[type=email]:focus, .form-background .form input[type=password]:focus {
+  outline: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.form-background .form input[type=text] + span, .form-background .form input[type=email] + span, .form-background .form input[type=password] + span {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-weight: 600;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.form-background .form input[type=text]:focus + span, .form-background .form input[type=email]:focus + span, .form-background .form input[type=password]:focus + span {
+  top: -1rem;
+}
+.form-background .form .custom-control-label:before {
+  background-color: white;
+}
+.form-background .form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: black;
+}
+.form-background .form .form-submit {
+  background: #fd746c;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff9068, #fd746c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 2px solid;
+}
+.form-background .form .form-submit:hover {
+  box-shadow: 0 0 10px 3px white;
+}
+
+.card {
+  font-weight: 600;
+}
+
+.border-line {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+/*# sourceMappingURL=main.css.map */

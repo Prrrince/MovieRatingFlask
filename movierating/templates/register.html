@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="form-background">
+
+  <div class="form">
+    <div class="header">
+      <div class="icon">
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
+    <h3 class="form-heading">Sign Up</h3>
+    <form method="post" autocomplete="off">
+      {{ form.hidden_tag() }}
+      {% for field in form %}
+        {% if not field.type == "CSRFTokenField" %}
+        <div class="form-group">
+          <div class="input-text-group">
+            {{field(class="form-control")}}
+            <span>{{field.label}}</span>
+          </div>
+          {% if field.errors %}
+          <div class="py-1">
+              <div class="alert color-danger bg-white">
+                {% for error in field.errors %}
+                  <span>{{error}}</span>
+                {% endfor %}
+              </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+      <div class="form-group text-center">
+          <button type="submit" class="form-submit">Sign Up</button>
+      </div>
+    </form>
+    <div class="pt-3">
+      <small class="text-white">
+        Already Have An Account?
+        <a href="{{url_for('login')}}" class="ml-2 text-white font-weight-bold">Log In</a>
+      </small>
+    </div>
+  </div>
+</div>
+{% endblock content %}
